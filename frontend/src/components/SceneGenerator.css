@@ -1,0 +1,163 @@
+/* SceneGenerator.css - Стили для компонента генерации сцен */
+
+.scene-generator {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .generator-container {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+  }
+  
+  .generator-container h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+  }
+  
+  .form-group select {
+    cursor: pointer;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+  }
+  
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(108, 92, 231, 0.2);
+  }
+  
+  .selected-character-preview {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .selected-character-preview img {
+    max-height: 200px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .generate-button {
+    background-color: var(--primary-color);
+    min-width: 200px;
+  }
+  
+  .generated-scenes {
+    width: 100%;
+  }
+  
+  .generated-scenes h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+  }
+  
+  .no-scenes {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    color: var(--text-light);
+  }
+  
+  .scenes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .scene-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .scene-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .scene-image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .scene-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+  
+  .scene-card:hover .scene-image {
+    transform: scale(1.05);
+  }
+  
+  .scene-info {
+    padding: 1.2rem;
+  }
+  
+  .scene-description {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+  
+  .scene-character {
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+  }
+  
+  .scene-date {
+    font-size: 0.8rem;
+    color: var(--text-light);
+  }
+  
+  @media (min-width: 992px) {
+    .scene-generator {
+      grid-template-columns: 400px 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .scenes-grid {
+      grid-template-columns: 1fr;
+    }
+  }

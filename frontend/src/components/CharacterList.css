@@ -1,0 +1,103 @@
+/* CharacterList.css - Стили для компонента списка персонажей */
+
+.character-list {
+    width: 100%;
+  }
+  
+  .character-list h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+  }
+  
+  .no-characters {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    color: var(--text-light);
+  }
+  
+  .characters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .character-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .character-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .character-image-container {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .character-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+  
+  .character-card:hover .character-image {
+    transform: scale(1.05);
+  }
+  
+  .character-info {
+    padding: 1.2rem;
+  }
+  
+  .character-description {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-color);
+    min-height: 2.8rem;
+  }
+  
+  .character-meta {
+    margin-bottom: 1rem;
+    color: var(--text-light);
+    font-size: 0.8rem;
+  }
+  
+  .character-date:not(:last-child) {
+    margin-bottom: 0.3rem;
+  }
+  
+  .character-actions {
+    display: flex;
+    gap: 0.8rem;
+  }
+  
+  .edit-button, .delete-button {
+    flex: 1;
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+  
+  .edit-button {
+    background-color: var(--primary-color);
+  }
+  
+  .delete-button {
+    background-color: var(--error-color);
+  }
+  
+  @media (max-width: 768px) {
+    .characters-grid {
+      grid-template-columns: 1fr;
+    }
+  }

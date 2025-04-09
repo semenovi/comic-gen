@@ -1,0 +1,110 @@
+/* DependencyStatus.css - Стили для компонента статуса зависимостей */
+
+.dependency-status {
+    width: 100%;
+  }
+  
+  .dependency-status h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+  }
+  
+  .status-overview {
+    margin-bottom: 2rem;
+  }
+  
+  .status-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow);
+  }
+  
+  .status-card h3, .status-card h4 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+  }
+  
+  .status-card.overall {
+    border-left: 4px solid var(--primary-color);
+  }
+  
+  .progress-bar {
+    height: 10px;
+    background-color: var(--border-color);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 0.8rem;
+  }
+  
+  .progress-bar-fill {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    transition: width 0.3s ease;
+  }
+  
+  .status-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+  }
+  
+  .progress-percent {
+    font-weight: bold;
+  }
+  
+  .status-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .status-section h3 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+  }
+  
+  .status-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .install-button {
+    background-color: var(--primary-color);
+    width: 100%;
+  }
+  
+  .start-button {
+    background-color: var(--success-color);
+    width: 100%;
+  }
+  
+  .instructions {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    margin-top: 2rem;
+  }
+  
+  .instructions h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .instructions p {
+    margin-bottom: 1rem;
+    color: var(--text-light);
+  }
+  
+  @media (max-width: 768px) {
+    .status-sections {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }

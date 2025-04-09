@@ -1,0 +1,8 @@
+flask>=2.3.2
+flask-cors>=5.0.0
+Pillow>=10.0.0
+torch>=2.2.0
+diffusers>=0.19.3
+transformers>=4.30.2
+accelerate>=0.20.3
+numpy>=1.24.3

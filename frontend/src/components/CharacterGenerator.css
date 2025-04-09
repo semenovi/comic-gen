@@ -1,0 +1,112 @@
+/* CharacterGenerator.css - Стили для компонента генерации персонажа */
+
+.character-generator {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .generator-container {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+  }
+  
+  .generator-container h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .form-group textarea, 
+  .form-group input[type="text"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+  }
+  
+  .form-group textarea:focus, 
+  .form-group input[type="text"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(108, 92, 231, 0.2);
+  }
+  
+  .file-input-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .file-input-container input[type="file"] {
+    margin-bottom: 1rem;
+  }
+  
+  .image-preview-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 1rem;
+  }
+  
+  .image-preview {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+  }
+  
+  .clear-image-button {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: var(--error-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 0;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .generate-button {
+    background-color: var(--primary-color);
+    flex: 1;
+  }
+  
+  .save-button {
+    background-color: var(--success-color);
+    flex: 1;
+  }
+  
+  .cancel-button {
+    background-color: var(--text-light);
+    flex: 1;
+  }
+  
+  @media (min-width: 768px) {
+    .character-generator {
+      grid-template-columns: minmax(300px, 400px) 1fr;
+    }
+  }
